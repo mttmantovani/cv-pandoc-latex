@@ -1,6 +1,6 @@
 # Makefile for CV with pandoc + latex
 # Author: Mattia Mantovani
-# Last modified: Sun Apr 26, 2020  06:08PM
+# Last modified: Sun Apr 26, 2020  06:11PM
 # {{{ Variables
 
 PANDOC      := pandoc
@@ -23,7 +23,7 @@ all-letts: $(LETTS)
 
 $(CVS) $(LETTS) $(CV): %: %.pdf
 
-$(COMPS): %: %_cv %_letter
+$(COMPS): %: %-cv %-letter
 
 $(CV).pdf: $(CV).tex
 	@$(PANDOC) -o $@ $< --template=$<
