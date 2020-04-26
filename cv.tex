@@ -1,0 +1,110 @@
+%------------------------------------------------------------------------------
+% CV and cover letter
+%
+% Last modified: Sun Apr 26, 2020  06:06PM
+%------------------------------------------------------------------------------
+% {{{ Preamble
+\documentclass[10pt,a4paper,sans]{moderncv}
+\moderncvstyle{classic} % 'casual' (default), 'classic', 'oldstyle', 'banking'
+\moderncvcolor{black}
+\usepackage[document]{ragged2e}
+\usepackage{newtxtext}
+\usepackage{lastpage}
+\usepackage{lipsum}
+\usepackage[scale=0.75]{geometry}
+\setlength{\hintscolumnwidth}{3.4cm}
+
+\makeatletter
+\def\input@path{{./coverletters/}}
+\makeatother
+\graphicspath{{./graphics/}}
+
+\firstname{John}
+\familyname{Doe}
+
+\title{Curriculum Vitae}
+\address{\mbox{}}{\mbox{}}
+\mobile{\mbox{}}
+\email{john.doe@gmail.com}
+%\homepage{github.io/otnamm}
+\extrainfo{\includegraphics[height=8pt]{skype.png} johndoe\\
+		   \includegraphics[height=8pt]{github.png} johndoe \\
+		   \includegraphics[height=8pt]{twitter.png} johndoe\_\kern-.14ex\_
+          } 
+\photo[100pt][0.pt]{photo}
+
+\rfoot{\addressfont\itshape\textcolor{gray}{Page \thepage\ of 
+       \pageref{LastPage}}
+}
+% }}}
+
+% {{{ Document
+\begin{document}
+
+    % {{{ Cover letter
+    $if(coverletter)$
+    \input{$coverletter$}
+    \clearpage
+    $endif$
+    % }}}
+
+    \makecvtitle
+
+    % {{{ Personal info
+    \cvitem{First name}{John}
+    \cvitem{Last name}{Doe}
+    \cvitem{Date, place of birth}{\mbox{}}
+    \cvitem{Current address}{\mbox{}}
+    \cvitem{Mobile}{\mbox{}}
+    \cvitem{E-mail}{\href{mailto:john.doe@gmail.com}{john.doe@gmail.com}}
+    \cvitem{Skype contact}{johndoe}
+    % }}}
+    % {{{ Current position
+    \section{Current position}
+    \cventry{May 2017---March 2020}{PhD Researcher}{}{}{}{}
+    % }}}
+    % {{{ Experience
+    \section{Experience}
+    \cvitem{since 2019}{}    
+    % }}} 
+    % {{{ Education
+    \section{Education}
+    \cventry{2016}{MSc}{}{}
+            {}
+            {Thesis:} 
+    \cventry{2014}{BSc in Physics}{}{}{}
+            {Thesis:}
+    % }}}
+    % {{{ ICT skills
+    \section{ICT skills}
+    % }}}
+    % {{{ Publications
+    \section{Publications in peer-reviewed journals and preprints}
+    % }}}
+    % {{{ Scientific contributions
+    \section{International conference and workshop contributions}
+    \section{Training courses}
+    \section{Invited seminars}
+    % }}}
+    % {{{ Grants
+    \section{Grants}
+    % }}}
+    % {{{ Languages
+    \section{Languages}
+    % }}}
+    % {{{ Soft skills
+    \section{Soft skills}
+    % }}}
+    % {{{ Hobby
+    \section{Hobbies}
+    % }}}
+    % {{{ References
+    \section{References}
+    % }}}
+    % {{{ Declaration and signature
+    \vspace{3cm}
+    \hspace{2cm}City, \today \hspace{5cm}John Doe
+    % }}}
+
+\end{document}
+% }}}

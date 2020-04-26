@@ -1,0 +1,51 @@
+%------------------------------------------------------------------------------ 
+% Cover letter
+%
+% Last modified: Sun Apr 26, 2020  05:31PM
+%------------------------------------------------------------------------------
+%
+$if(onlyletter)$
+ \documentclass[10pt,a4paper,sans]{moderncv}
+ \moderncvstyle{classic} % 'casual' (default), 'classic', 'oldstyle', 'banking'
+ \moderncvcolor{black}
+ \usepackage[document]{ragged2e}
+ \usepackage{newtxtext}
+ \usepackage{lastpage}
+ \usepackage{lipsum}
+ \usepackage[scale=0.75]{geometry}
+ \setlength{\hintscolumnwidth}{3.4cm}
+ \graphicspath{../graphics/}
+
+ \firstname{John}
+ \familyname{Doe}
+ \title{Curriculum Vitae}
+ \address{\mbox{}}{\mbox{}}
+ \mobile{\mbox{}}
+ \email{john.doe@gmail.com}
+ %\homepage{github.io/otnamm}
+ \extrainfo{\includegraphics[height=8pt]{./graphics/skype.png} johndoe\\
+		    \includegraphics[height=8pt]{./graphics/github.png} johndoe \\
+			\includegraphics[height=8pt]{./graphics/twitter.png} 
+                                        johndoe\_\kern-.14ex\_} 
+
+\begin{document}
+$endif$
+
+\recipient{Company}{\mbox{}}
+\date{\today}
+\opening{\textbf{Subject: application}}
+\closing{Sincerely yours,}
+
+\makelettertitle
+
+Dear Madam/Sir,
+
+\justify
+
+\lipsum[1-5]
+\makeletterclosing
+
+$if(onlyletter)$
+\end{document}
+$endif$
+
